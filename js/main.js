@@ -14,12 +14,31 @@ var newColor = function () {
 
 toggleColor.addEventListener("click", newColor);
 
-//box 3
+//box 2 et 3
 var trigger = document.querySelector(".trigger");
-var target = document.querySelector("target");
+var target = document.querySelector(".target");
 var vanish = function () {
   trigger.classList.toggle("is-active");
   target.classList.toggle("is-invisible");
 };
 
-target.addEventListener("click", vanish);
+trigger.addEventListener("click", vanish);
+
+//box 4
+var triggerAll = document.querySelector(".trigger-all");
+var newColor = function () {
+  changeColor.classList.add("is-active");
+  toggleColor.classList.add("is-active");
+};
+
+triggerAll.addEventListener("click", newColor);
+
+//box 5
+var triggerAllSelf = document.querySelector(".trigger-all-self");
+var newColor = function () {
+  changeColor.classList.add("is-active");
+  toggleColor.classList.add("is-active");
+  triggerAllSelf.classList.add("is-active");
+};
+
+triggerAllSelf.addEventListener("click", newColor);
